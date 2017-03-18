@@ -12,7 +12,9 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <HelloWorld/>
+        <div className="App">
+        <HelloWorld />
+        </div>
       </Provider>
     );
   }
