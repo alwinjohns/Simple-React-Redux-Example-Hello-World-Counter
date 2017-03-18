@@ -1,3 +1,3 @@
-# To-Do
+# Simpel Counter 
 
-A simple to-do app using React and Redux
+A simple counter using React and Redux
