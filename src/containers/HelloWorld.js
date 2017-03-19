@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import Hello from '../components/Hello.js'
-import { HELLO_WORLD } from '../actions/action.js'
+import {increment, decrement, reset} from '../actions/action.js'
+
 const mapStateToProps = (state,ownProps) => {
   return {
     message: state.helloWorldReducer.message
@@ -9,8 +10,14 @@ const mapStateToProps = (state,ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onClick : () => {
-      dispatch({type: HELLO_WORLD })
+    onClickPlus : () => {
+      dispatch(increment())
+    },
+    onClickMinus : () => {
+      dispatch(decrement())
+    },
+    onClickReset : () => {
+      dispatch(reset())
     }
   }
 }
